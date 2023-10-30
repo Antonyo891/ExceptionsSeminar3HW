@@ -24,7 +24,7 @@ public class App {
              " успешно сохранен");
         } 
         catch (EntryDataExeption e) {
-            System.out.println(e);
+            System.out.print(e);
             System.out.println(e.getdata());
             e.printStackTrace();
         }
