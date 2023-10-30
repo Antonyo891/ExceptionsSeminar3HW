@@ -2,6 +2,8 @@ package View;
 
 import java.util.Scanner;
 
+import Interface.View;
+
 public class ConsoleView implements View {
     private Scanner console;
     private String request;

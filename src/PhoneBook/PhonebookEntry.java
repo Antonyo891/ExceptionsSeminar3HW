@@ -1,15 +1,21 @@
+package PhoneBook;
 public class PhonebookEntry {
     private String[] name;
     private String birthDate;
-    private Integer numberId, phoneNumber;
+    private Integer phoneNumber;
     private char gender;
 
-
+    /**
+     * Запись телефонной книги
+     * @param name - Фамилия Имя Отчество
+     * @param birthDate дата рождения формата dd.mm.yyyy
+     * @param phoneNumber телефонный номер
+     * @param gender пол (f - женский, m - мужской)
+     */
     PhonebookEntry(String[] name, String birthDate, 
-                    Integer numberId, Integer phoneNumber, char gender) {
+                    Integer phoneNumber, char gender) {
         this.name = name;
         this.birthDate = birthDate;
-        this.numberId = numberId;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
     }
@@ -40,14 +46,6 @@ public class PhonebookEntry {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
-    }
-
-    public Integer getNumberId() {
-        return this.numberId;
-    }
-
-    public void setNumberId(Integer numberId) {
-        this.numberId = numberId;
     }
 
     public Integer getPhoneNumber() {
