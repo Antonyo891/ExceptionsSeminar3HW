@@ -69,7 +69,7 @@ public class PhonebookEntry {
     public String toString() {
         return "<" + getLastName() + "><" + getFirstName() + "><" +
         getSurName() + "><" + getBirthDate() + "><" +
-            getPhoneNumber() + "><" + getGender();
+            getPhoneNumber() + "><" + getGender() + ">";
     }
 
     

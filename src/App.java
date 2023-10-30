@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.FileWriter;
 
 import EntryExeption.EntryDataExeption;
-import EntryExeption.EntryExeptions;
 import EntryExeption.EntryLengthExeption;
 
 public class App {
@@ -20,19 +19,21 @@ public class App {
         try {
             entry = presenter.create();
             repeat = false;
-        } catch (EntryDataExeption e) {
+            presenter.saveEntry(entry.getLastName(),entry.toString());
+            System.out.println("Файл " + entry.getLastName() + 
+             " успешно сохранен");
+        } 
+        catch (EntryDataExeption e) {
             System.out.println(e);
             System.out.println(e.getdata());
-            e.getStackTrace();
+            e.printStackTrace();
         }
         catch (EntryLengthExeption e) {
             System.err.print(e);
             System.out.println(e.getLength());
-            e.getStackTrace();
+            e.printStackTrace();
         }
-  
-        }
-
         
+        }
     }
 }
