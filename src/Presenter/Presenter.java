@@ -24,7 +24,7 @@ public class Presenter {
     }
    
     public void saveEntry (String fileName, String filevalue){
-        File file = new File(fileName);
+        File file = new File(fileName+".txt");
         try (FileWriter fileWriter = new FileWriter(file, true);) {             
         if (file.length()==0) {
             fileWriter.write(filevalue+"\n");
