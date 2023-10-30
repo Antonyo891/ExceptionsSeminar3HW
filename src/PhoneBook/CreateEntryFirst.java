@@ -21,8 +21,11 @@ public class CreateEntryFirst implements CreateEntry {
     @Override
     public PhonebookEntry create(String input, Integer numbersOfFields) throws EntryExeptions {
         Integer length = input.split(" ").length;
-        if (length!=numbersOfFields) 
-            throw new EntryLengthExeption("Неверное количество введенных данных ", 
+        if (length>numbersOfFields) 
+            throw new EntryLengthExeption("Вы ввели больше данных чем нужно", 
+                                        length);
+        if (length<numbersOfFields) 
+            throw new EntryLengthExeption("Вы ввели меньше данных чем нужно", 
                                         length);
         this.entry = input.split(" ");
         this.name = new String[] {entry[0],entry[1],entry[2]};
