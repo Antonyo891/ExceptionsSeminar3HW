@@ -1,4 +1,4 @@
-package View.EntryExeption;
+package EntryExeption;
 
 public class EntryLengthExeption extends EntryExeptions{
     
