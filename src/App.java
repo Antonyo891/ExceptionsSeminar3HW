@@ -1,8 +1,38 @@
+import Interface.View;
+import PhoneBook.PhonebookEntry;
+import Presenter.Presenter;
+import View.ConsoleView;
+import java.io.File;
+import java.io.FileWriter;
+
+import EntryExeption.EntryDataExeption;
+import EntryExeption.EntryExeptions;
+import EntryExeption.EntryLengthExeption;
+
 public class App {
     public static void main(String[] args) {
-        String notes = "Баймурзаев Антон Сергеевич 14.05.1989 375297446847 m";
-        String notes_one = "Баймурзаев Антон 14.05.1989 375297446847 m";
-        String [] split_notes = notes.split(" ");
-        System.out.println(split_notes[0]);
+        PhonebookEntry entry;
+        View view = new ConsoleView();
+        boolean repeat = true;
+        view.Set("Начало выполнения программы");
+        Presenter presenter = new Presenter();
+        while (repeat) {
+        try {
+            entry = presenter.create();
+            repeat = false;
+        } catch (EntryDataExeption e) {
+            System.out.println(e);
+            System.out.println(e.getdata());
+            e.getStackTrace();
+        }
+        catch (EntryLengthExeption e) {
+            System.err.print(e);
+            System.out.println(e.getLength());
+            e.getStackTrace();
+        }
+  
+        }
+
+        
     }
 }

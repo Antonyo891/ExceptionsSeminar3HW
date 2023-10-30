@@ -8,12 +8,13 @@ public class ConsoleView implements View {
     private Scanner console;
     private String request;
 
-
-    public ConsoleView(String request) {
+/**
+ * Ввод данных через консоль
+ */
+    public ConsoleView() {
         this.console = new Scanner(System.in);
-        this.request = request;
     }
-
+   
     @Override
     public String Get() {
         System.out.print(request);

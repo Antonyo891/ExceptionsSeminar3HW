@@ -2,7 +2,7 @@ package PhoneBook;
 public class PhonebookEntry {
     private String[] name;
     private String birthDate;
-    private Integer phoneNumber;
+    private Long phoneNumber;
     private char gender;
 
     /**
@@ -13,7 +13,7 @@ public class PhonebookEntry {
      * @param gender пол (f - женский, m - мужской)
      */
     PhonebookEntry(String[] name, String birthDate, 
-                    Integer phoneNumber, char gender) {
+                    Long phoneNumber, char gender) {
         this.name = name;
         this.birthDate = birthDate;
         this.phoneNumber = phoneNumber;
@@ -48,11 +48,11 @@ public class PhonebookEntry {
         this.birthDate = birthDate;
     }
 
-    public Integer getPhoneNumber() {
+    public Long getPhoneNumber() {
         return this.phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
