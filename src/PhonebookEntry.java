@@ -1,11 +1,12 @@
-public class Phonebook {
+public class PhonebookEntry {
     private String[] name;
     private String birthDate;
     private Integer numberId, phoneNumber;
     private char gender;
 
 
-    Phonebook(String[] name, String birthDate, Integer numberId, Integer phoneNumber, char gender) {
+    PhonebookEntry(String[] name, String birthDate, 
+                    Integer numberId, Integer phoneNumber, char gender) {
         this.name = name;
         this.birthDate = birthDate;
         this.numberId = numberId;
